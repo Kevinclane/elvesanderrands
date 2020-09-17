@@ -5,8 +5,8 @@
         <div
           class="col-md-5 offset-md-1 order-2 order-md-1 fontCabin d-flex flex-column justify-content-center"
         >
-          <h1>Got too much on your plate or looking for extra work?</h1>
-          <h4>Elves and Errands can help! Create a job posting to get a hand with that growing todo list or browse active job requests and earn some extra cash!</h4>
+          <h1>A magic place for getting the right service at the right price</h1>
+          <h4>A money saving neighbor to neighbor liason between those who do good work, those who need good work done – safe, efficient, effective and usually cheaper than anywhere else.</h4>
         </div>
         <div class="col-md-5 order-1 order-md-2 text-center">
           <img src="../assets/mainHelpFour.jpg" alt="error loading image" class="mainImg" />
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="row my-2 d-flex justify-content-around">
-        <h4 class="col-12 text-center">Browse our catagories</h4>
+        <h3 class="col-12 text-center">Browse our catagories</h3>
         <div class="col-md-3 col-10 m-3">
           <div class="card boxShadowCstm cardHeight">
             <img
@@ -36,7 +36,7 @@
               alt="error loading image"
             />
             <div class="card-body d-flex align-items-end justify-content-center">
-              <h5 class="card-title">Errands/small tasks</h5>
+              <h5 class="card-title">Errands/Small Tasks</h5>
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default {
 }
 .cardImg {
   max-width: 100%;
-  max-height: 70%;
+  max-height: 80%;
 }
 .boxShadowCstm {
   box-shadow: 4px 4px 5px black;
