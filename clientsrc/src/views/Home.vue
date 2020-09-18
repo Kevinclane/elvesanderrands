@@ -9,7 +9,7 @@
           <h4>A money saving neighbor to neighbor liason between those who do good work, those who need good work done – safe, efficient, effective and usually cheaper than anywhere else.</h4>
         </div>
         <div class="col-md-5 order-1 order-md-2 text-center">
-          <img src="../assets/mainHelpFour.jpg" alt="error loading image" class="mainImg" />
+          <img src="../assets/mainHelp.jpg" alt="error loading image" class="mainImg" />
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
             <div class="col-md-3 col-10 m-3">
               <div class="card boxShadowCstm cardHeight">
                 <img
-                  src="../assets/errandsFour.jpg"
+                  src="../assets/errands.jpg"
                   class="card-img-top cardImg"
                   alt="error loading image"
                 />
@@ -45,7 +45,7 @@
             <div class="col-md-3 col-10 m-3">
               <div class="card boxShadowCstm cardHeight">
                 <img
-                  src="../assets/cleaningSeven.jpg"
+                  src="../assets/cleaning.jpg"
                   class="card-img-top cardImg"
                   alt="error loading image"
                 />
@@ -57,7 +57,7 @@
             <div class="col-md-3 col-10 m-3">
               <div class="card boxShadowCstm cardHeight">
                 <img
-                  src="../assets/mechanicTwo.jpg"
+                  src="../assets/mechanic.jpg"
                   class="card-img-top cardImg"
                   alt="error loading image"
                 />
@@ -69,7 +69,7 @@
             <div class="col-md-3 col-10 m-3">
               <div class="card boxShadowCstm cardHeight">
                 <img
-                  src="../assets/contractorOne.jpg"
+                  src="../assets/contractor.png"
                   class="card-img-top cardImg"
                   alt="error loading image"
                 />
@@ -81,7 +81,7 @@
             <div class="col-md-3 col-10 m-3">
               <div class="card boxShadowCstm cardHeight">
                 <img
-                  src="../assets/babysitterOne.jpg"
+                  src="../assets/babysitter.jpeg"
                   class="card-img-top cardImg"
                   alt="error loading image"
                 />
@@ -93,7 +93,7 @@
             <div class="col-md-3 col-10 m-3">
               <div class="card boxShadowCstm cardHeight">
                 <img
-                  src="../assets/otherOne.jpg"
+                  src="../assets/other.jpg"
                   class="card-img-top cardImg"
                   alt="error loading image"
                 />
@@ -239,7 +239,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 my-4 bg-white">
+        <div class="col-12 my-4">
           <div class="row d-flex align-items-center justify-content-center">
             <div class="col-1">
               <i class="fa fa-check fa-2x text-success mr-2" aria-hidden="true"></i>
@@ -306,17 +306,6 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
 .mainImg {
   max-height: 40vh;
-}
-.bgImg {
-  background: url(../assets/mainHelpFive.jpg) no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin: 0 auto;
-  overflow-x: hidden;
-  user-select: none;
-  height: 50vh;
 }
 .vidBg {
   background: url(../assets/videoBg.png);

@@ -23,4 +23,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+* {
+  font-family: "Cabin", sans-serif;
+}
+</style>
