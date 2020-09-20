@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid bg-gray py-2">
+    <div class="container-fluid py-2">
       <div class="row py-2 d-flex justify-content-around">
         <div class="col-md-5 col-12 my-2 d-flex align-items center justify-content-center">
           <button
@@ -299,6 +299,51 @@
 <script>
 export default {
   name: "home",
+  data() {
+    return {
+      userLocation: {},
+      targetLocation: {
+        lat: 44.6199138,
+        lon: -116.33574329999999,
+      },
+    };
+  },
+  methods: {
+    async locate() {
+      if ("geolocation" in navigator) {
+        await navigator.geolocation.getCurrentPosition((position) => {
+          (this.userLocation.lat = position.coords.latitude),
+            (this.userLocation.lon = position.coords.longitude);
+        });
+      } else {
+        console.log("fail");
+      }
+    },
+    distance() {
+      let lat1 = this.userLocation.lat;
+      let lon1 = this.userLocation.lon;
+      let lat2 = this.targetLocation.lat;
+      let lon2 = this.targetLocation.lon;
+      const R = 3958.8; // miles
+      const φ1 = (lat1 * Math.PI) / 180; // φ, λ in radians
+      const φ2 = (lat2 * Math.PI) / 180;
+      const Δφ = ((lat2 - lat1) * Math.PI) / 180;
+      const Δλ = ((lon2 - lon1) * Math.PI) / 180;
+
+      const a =
+        Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
+        Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+      const d = R * c; // in metres
+      console.log(d + " miles");
+    },
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+  },
 };
 </script>
 
@@ -324,22 +369,12 @@ export default {
 .bg-gray {
   background-color: rgb(221, 221, 221);
 }
-.btn-green {
-  background-color: #7ca25e;
-}
 .rounded-button-lg {
   border-radius: 25px;
 }
 .cardImg {
   max-width: 100%;
   max-height: 80%;
-}
-.boxShadowCstm {
-  box-shadow: 4px 4px 5px black;
-  border: 1px solid black;
-}
-.borderSm {
-  border: 1px solid black;
 }
 .cardHeight {
   height: 40vh;

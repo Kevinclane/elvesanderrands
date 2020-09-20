@@ -4,6 +4,10 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 // @ts-ignore
 import Profile from "../views/Profile.vue";
+// @ts-ignore
+import Jobs from "../views/Jobs.vue"
+// @ts-ignore
+import JobDetails from "../views/JobDetails"
 import { authGuard } from "@bcwdev/auth0-vue";
 
 Vue.use(VueRouter);
@@ -13,6 +17,16 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home
+  },
+  {
+    path: "/jobs",
+    name: "Jobs",
+    component: Jobs
+  },
+  {
+    path: "/jobs/:jobId",
+    name: "JobDetails",
+    component: JobDetails,
   },
   {
     path: "/profile",

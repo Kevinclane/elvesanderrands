@@ -17,9 +17,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
-        <!-- <li class="nav-item" :class="{ active: $route.name == 'Home' }">
-          <router-link :to="{ name: 'Home' }" class="nav-link">Home</router-link>
-        </li>-->
+        <li class="nav-item" :class="{ active: $route.name == 'Jobs' }">
+          <router-link :to="{ name: 'Jobs' }" class="nav-link">Jobs</router-link>
+        </li>
         <li
           class="nav-item"
           v-if="$auth.isAuthenticated"
