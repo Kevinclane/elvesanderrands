@@ -308,6 +308,11 @@ export default {
       },
     };
   },
+  mounted() {
+    if (this.$auth.isAuthenticated) {
+      this.$store.dispatch("getProfile");
+    }
+  },
   methods: {
     async locate() {
       if ("geolocation" in navigator) {

@@ -118,6 +118,9 @@ export default {
   },
   async mounted() {
     await this.$store.dispatch("getOpenJobs");
+    if (this.$auth.isAuthenticated) {
+      this.$store.dispatch("getProfile");
+    }
   },
   methods: {
     addJob() {

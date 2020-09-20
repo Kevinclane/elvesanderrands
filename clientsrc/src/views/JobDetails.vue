@@ -21,6 +21,9 @@ export default {
   },
   async mounted() {
     await this.$store.dispatch("getJobById", this.$route.params.jobId);
+    if (this.$auth.isAuthenticated) {
+      await this.$store.dispatch("getProfile");
+    }
   },
   methods: {
     deleteJob() {
@@ -31,8 +34,8 @@ export default {
     job() {
       return this.$store.state.activeJob;
     },
-    profile() {
-      return this.$store.state.profile;
+    user() {
+      return this.$store.state.user;
     },
     start() {
       return moment(String(this.job.startDate)).format("MM/DD/YYYY");
