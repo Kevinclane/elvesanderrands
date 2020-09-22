@@ -124,6 +124,9 @@ export default {
   },
   methods: {
     addJob() {
+      if (!this.newJob.img) {
+        this.newJob.img = "//placehold.it/200x200";
+      }
       this.newJob.startDate = moment(this.newJob.startDate).format(
         "MM-DD-YYYY"
       );

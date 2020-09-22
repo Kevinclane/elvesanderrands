@@ -3,11 +3,11 @@
     <h1>{{job.title}}</h1>
     <h3>{{job.description}}</h3>
     <h2>${{job.startPrice}}</h2>
-    <h4>{{start}}</h4>
-    <h4>{{end}}</h4>
+    <h4>{{when}}</h4>
+
     <h4>{{job.location.lat}}</h4>
     <h4>{{job.location.lon}}</h4>
-    <button @click="deleteJob">delete</button>
+    <i class="far fa-trash-alt action text-danger" @click="deleteJob"></i>
   </div>
 </template>
 
@@ -37,11 +37,16 @@ export default {
     user() {
       return this.$store.state.user;
     },
-    start() {
-      return moment(String(this.job.startDate)).format("MM/DD/YYYY");
-    },
-    end() {
-      return moment(String(this.job.startDate)).format("MM/DD/YYYY");
+    when() {
+      if (this.job.startDate == this.job.endDate) {
+        return moment(String(this.job.startDate)).format("MM/DD/YYYY");
+      } else {
+        return (
+          moment(String(this.job.startDate)).format("MM/DD/YYYY") +
+          " - " +
+          moment(String(this.job.endDate)).format("MM/DD/YYYY")
+        );
+      }
     },
   },
 };

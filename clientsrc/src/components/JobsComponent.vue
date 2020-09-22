@@ -38,11 +38,16 @@ export default {
     user() {
       return this.$store.state.user;
     },
-    start() {
-      return moment(String(this.job.startDate)).format("MM/DD/YYYY");
-    },
-    end() {
-      return moment(String(this.job.startDate)).format("MM/DD/YYYY");
+    when() {
+      if (this.job.startDate == this.job.endDate) {
+        return moment(String(this.job.startDate)).format("MM/DD/YYYY");
+      } else {
+        return (
+          moment(String(this.job.startDate)).format("MM/DD/YYYY") +
+          " - " +
+          moment(String(this.job.endDate)).format("MM/DD/YYYY")
+        );
+      }
     },
   },
 };

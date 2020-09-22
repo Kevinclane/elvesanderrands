@@ -8,7 +8,7 @@ const Job = new Schema(
     title: { type: String, required: true },
     description: { type: String, required: true },
     startPrice: { type: String, required: true },
-    img: [{ type: String, default: "//placehold.it/200x200" }],
+    img: [{ type: String }],
     estimatedHours: { type: Number, required: true },
     startDate: { type: Date, required: true },
     endDate: { type: Date, required: true },
